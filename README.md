@@ -1,10 +1,7 @@
-# cra-template
+# cra-template-uplab
 
-This is the official base template for [Create React App](https://github.com/facebook/create-react-app).
+This is a CRA template that we use in UpLab Software to initiate our projects.
 
-If you don't specify a template (for example, `--template typescript`), this template will be used by default.
+To init the app using this template please use this command:
 
-For more information, please refer to:
-
-- [Getting Started](https://create-react-app.dev/docs/getting-started) – How to create a new app.
-- [User Guide](https://create-react-app.dev) – How to develop apps bootstrapped with Create React App.
+`npx create-react-app my-app --template @uplab/cra-template-uplab`
