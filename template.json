@@ -1,7 +1,7 @@
 {
   "package": {
     "scripts": {
-      "start": "EXTEND_ESLINT=true react-scripts start",
+      "start": "react-scripts start",
       "lint": "eslint ./src",
       "lint:fix": "eslint --fix ./src",
       "release": "standard-version",
