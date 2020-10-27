@@ -1,0 +1,63 @@
+{
+  "package": {
+    "scripts": {
+      "start": "EXTEND_ESLINT=true react-scripts start",
+      "lint": "eslint ./src",
+      "lint:fix": "eslint --fix ./src",
+      "release": "standard-version",
+      "release:major": "npm run release -- --release-as major",
+      "release:minor": "npm run release -- --release-as minor",
+      "release:patch": "npm run release -- --release-as patch",
+      "graphql:dump": "node bin/schemaQuery.js"
+    },
+    "dependencies": {
+      "@apollo/react-hooks": "^3.1.5",
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "apollo-cache-inmemory": "^1.6.5",
+      "apollo-client": "^2.6.8",
+      "apollo-link": "^1.2.14",
+      "apollo-link-context": "^1.0.20",
+      "apollo-link-error": "^1.1.13",
+      "apollo-link-http": "^1.5.17",
+      "graphql": "^15.0.0",
+      "graphql-tag": "^2.10.3",
+      "lodash": "^4.17.15",
+      "node-sass": "^4.14.1",
+      "normalize.css": "^8.0.1",
+      "react-loading": "^2.0.3",
+      "react-router-dom": "^5.2.0",
+      "url-pattern": "^1.0.3",
+      "web-vitals": "^0.2.4"
+    },
+    "devDependencies": {
+      "cz-conventional-changelog": "^3.1.0",
+      "eslint": "^7.11.0",
+      "eslint-config-airbnb": "^18.1.0",
+      "eslint-config-prettier": "^6.11.0",
+      "eslint-plugin-only-warn": "^1.0.2",
+      "eslint-plugin-prettier": "^3.1.4",
+      "husky": "^4.2.3",
+      "lint-staged": "^10.0.8",
+      "prettier": "^1.19.1",
+      "standard-version": "^7.1.0"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "react-app/jest"]
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": "eslint --cache --fix"
+    }
+  }
+}
